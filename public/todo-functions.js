@@ -35,9 +35,16 @@ const renderTodos = (list, filters) => {
     //Apends the a title to the list that has the number of incompleted todos on it
     todosLeft.appendChild(incompleteTodosTitle(incompleteTodos))
     //Generate all of the list elements and shows them on screen
-    filteredList.forEach((value) => {
-        todoList.appendChild(generateTodoDom(value))
-    })
+    if (filteredList.length === 0) {
+        const emptyMsg = document.createElement('h2')
+        emptyMsg.className = `font-medium text-gray-500 text-base`
+        emptyMsg.innerHTML = `The list is empty :(`
+        todoList.appendChild(emptyMsg)
+    } else {
+        filteredList.forEach((value) => {
+            todoList.appendChild(generateTodoDom(value))
+        })
+    }
 }
 
 //Sorts the list by the selected filter and returns a new list
@@ -84,7 +91,9 @@ const sortListBy = (list, filter) => {
 //Returns an H2 element with the numbers of todos left
 const incompleteTodosTitle = (list) => {
     const todosLeft = document.createElement('h2')
-    todosLeft.textContent = `You have ${list.length} todos left`
+    todosLeft.className = `text-gray-900`
+    if (list.length === 1) { todosLeft.textContent = `You have ${list.length} todo left` }
+    else { todosLeft.textContent = `You have ${list.length} todos left` }
     return todosLeft
 }
 
@@ -100,7 +109,7 @@ const generateTodoDom = (value) => {
 
     containerButton.className = 'h-full px-3 bg-red-500 flex items-center rounded-r-md hover:bg-red-400 cursor-pointer'
     containerTodo.className = 'h-full w-full cursor-pointer flex items-center pl-2 text-blue-500 font-semibold'
-    newElement.className = 'hover:text-indigo-700 cursor-default' 
+    newElement.className = 'hover:text-indigo-700 cursor-default'
     container.className = 'flex items-center justify-between h-9 bg-gray-100 rounded-md hover:bg-gray-200'
     checkBox.className = 'mr-4 h-5 w-5 text-green-400 border-0 focus:ring-0 rounded-md focus:ring-offset-0'
 
