@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Todo-app</title>
+</head>
+
+<body
+    class="flex justify-center items-center h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-8 font-sans">
+    <div id="container" class="bg-gray-50 shadow-lg p-8 rounded-md space-y-6 max-h-full">
+        <h1 class="text-4xl font-semibold"> <a href="./index.html" class="text-gray-400 transition hover:text-green-400"><i
+                    class="fas fa-arrow-left"></i></a> Edit Todo</h1>
+        <div class="flex justify-between">
+            <input type="text" name="titleInput" id="title-input" placeholder="enter new title"
+                class="mr-8 border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent p-2 rounded-md shadow-sm text-gray-800">
+            <button name="removeBtn" id="remove-button"
+                class="bg-red-500 hover:bg-red-600 focus:outline-none transition duration-150 ease-in-out text-white px-4 py-2 rounded-md outline-none">Delete
+                Todo</button>
+        </div>
+        <div>
+            <span id="time-ago" class="text-gray-400"></span>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+    <script src="todo-functions.js"></script>
+    <script src="edit-functions.js"></script>
+</body>
+
+</html>

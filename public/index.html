@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Todo-app</title>
+</head>
+
+<body
+    class="flex justify-center items-start h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-8 font-sans">
+    <div id="container" class="bg-gray-50 shadow-lg p-8 rounded-md space-y-6 max-h-full">
+        <h1 class="text-4xl font-semibold">To-Do App - To Moon 🌑</h1>
+        <div class="flex justify-between">
+            <input type="text" name="todoFilter" id="filter-todo" placeholder="filter todos list"
+                class="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent p-2 rounded-md shadow-sm text-gray-500">
+
+            <select name="filterBy" id="filter-by"
+                class="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent p-2 rounded-md shadow-sm text-gray-500">
+                <option value="byEdited">Sort by last edited</option>
+                <option value="byCreated">Sort by recently created</option>
+                <option value="alphabetical">Sort alphabetically</option>
+            </select>
+        </div>
+        <div id="todos-left" class="font-semibold text-lg"></div>
+        <div id="todo-list" class="max-h-96 overflow-auto space-y-2"></div>
+
+        <form action="" id="submit-todo-form" class="flex flex-col space-y-3">
+            <div class="text-gray-500">
+                <label class="cursor-pointer">
+                    <input type="checkbox" name="hideTodos" id="hide-todos"> Hide completed todos
+                </label>
+            </div>
+            <div class="flex justify-between">
+                <input type="text" name="newTodoInput" placeholder="add a new todo" id="new-todo-input"
+                    class="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent p-2 rounded-md shadow-sm text-gray-500">
+                <button type="submit" id="add-todo"
+                    class="bg-purple-600 hover:bg-purple-900 focus:outline-none transition duration-150 ease-in-out text-white px-4 py-2 rounded-md outline-none">Add
+                    todo</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+    <script src="todo-functions.js"></script>
+    <script src="todo-app.js""></script>
+</body>
+</html>
