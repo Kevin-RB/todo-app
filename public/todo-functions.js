@@ -102,7 +102,7 @@ const generateTodoDom = (value) => {
     containerTodo.className = 'h-full w-full cursor-pointer flex items-center pl-2 text-blue-500 font-semibold'
     newElement.className = 'hover:text-indigo-700 cursor-default' 
     container.className = 'flex items-center justify-between h-9 bg-gray-100 rounded-md hover:bg-gray-200'
-    checkBox.className = 'mr-4 h-5 w-5 rounded-lg'
+    checkBox.className = 'mr-4 h-5 w-5 text-green-400 border-0 focus:ring-0 rounded-md focus:ring-offset-0'
 
 
     //apends the inner divs to the main Todo container
