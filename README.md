@@ -16,6 +16,6 @@ This web application was created as a personal project to practice and demonstra
     
 ## Gallery
 ![3](https://user-images.githubusercontent.com/69731479/113071033-8aca6880-9189-11eb-844b-99753088557f.gif)
-![4](https://user-images.githubusercontent.com/69731479/113071034-8b62ff00-9189-11eb-950b-a3cdcdef148f.gif)
+![4](https://user-images.githubusercontent.com/69731479/113072238-35438b00-918c-11eb-9ab3-866501de7746.gif)
 ![1](https://user-images.githubusercontent.com/69731479/113071035-8bfb9580-9189-11eb-8e2d-292011df9627.gif)
 ![2](https://user-images.githubusercontent.com/69731479/113071037-8bfb9580-9189-11eb-9e4d-eb30e1c82aca.gif)
