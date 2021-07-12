@@ -8,10 +8,21 @@ This web application was created as a personal project to practice and demonstra
 
   Dependencies:
   
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.7",
     "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "live-server": "^1.2.1",
+    "luxon": "^2.0.1",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.4",
+    "uuid": "^8.3.2",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
     "win-node-env": "^0.4.0"
     
 ## Gallery
