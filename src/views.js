@@ -10,11 +10,11 @@ const renderTodos = () => {
     const todoList = document.querySelector('#todo-list')
     const todosLeft = document.querySelector('#todos-left')
     const todos = getTodos()
-    const filters = getFilters()
+    const {sortBy , hideCompleted, filterByTitle} = getFilters()
     //Filters the array by the "hide completed" filter and checks if the element contains the word we are looking for
-    const sortedList = sortListBy(todos, filters.sortBy)
+    const sortedList = sortListBy(todos, sortBy)
     const filteredList = sortedList.filter((value) => {
-        return filters.hideCompleted && value.completed ? false : value.title.toLowerCase().includes(filters.filterByTitle.toLowerCase())
+        return hideCompleted && value.completed ? false : value.title.toLowerCase().includes(filterByTitle.toLowerCase())
     })
     //Filters the previous array and returns the elements that are not completed
     const incompleteTodos = filteredList.filter((value) => !value.completed)
