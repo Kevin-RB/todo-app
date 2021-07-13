@@ -29,9 +29,10 @@ const getTodos = () => todos
 // Arguments: todo text
 // Return value: none
 const createTodo = (title) => {
+    const id = uuidv4()
     const dateOfCreation = DateTime.now()
     todos.push({
-        id: uuidv4(),
+        id,
         title,
         completed: false,
         createdAt: dateOfCreation,
