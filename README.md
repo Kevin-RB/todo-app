@@ -1,10 +1,12 @@
 # To-Do App - To Moon 🌑
 This web application was created as a personal project to practice and demonstrate my web development skills in addition to adding a new project to my portfolio. It is an application to make to-do lists, you can sort the list by different parameters as well as search for a specific item or edit it as well, the information will remain saved in local storage which gives the application a use in life real.
 
+## Available at
+https://kr-todo-app-to-moon.netlify.app/
+
 ## About
  - The application was built using JavaScript, Tailwind, Babel and Webpack.
  - Responsive implemented thanks to the TailwindCss utility classes  
- - Demo available at : https://kr-todo-app-to-moon.netlify.app/
 
   Dependencies:
   
